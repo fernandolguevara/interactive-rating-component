@@ -21,6 +21,7 @@ declare global {
   const _mergeSearchString: typeof import('@solidjs/router')['_mergeSearchString']
   const batch: typeof import('solid-js')['batch']
   const children: typeof import('solid-js')['children']
+  const clsx: typeof import('clsx')['clsx']
   const createContext: typeof import('solid-js')['createContext']
   const createDeferred: typeof import('solid-js')['createDeferred']
   const createEffect: typeof import('solid-js')['createEffect']

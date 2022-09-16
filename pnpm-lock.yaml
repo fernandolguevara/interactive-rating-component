@@ -7,6 +7,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.30.6
   '@typescript-eslint/parser': ^5.30.6
   autoprefixer: ^10.4.7
+  clsx: ^1.2.1
   eslint: 8.10.0
   eslint-config-airbnb: ^19.0.4
   eslint-plugin-import: ^2.26.0
@@ -29,6 +30,7 @@ specifiers:
 dependencies:
   '@solidjs/meta': 0.28.0_solid-js@1.5.1
   '@solidjs/router': 0.4.2_solid-js@1.5.1
+  clsx: 1.2.1
   nanoid: 4.0.0
   postcss: 8.4.16
   solid-js: 1.5.1
@@ -1054,6 +1056,11 @@ packages:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.2
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: false
 
   /color-convert/1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}

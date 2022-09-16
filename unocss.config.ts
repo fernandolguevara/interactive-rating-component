@@ -22,6 +22,7 @@ const config = defineConfig({
     ...theme.extend,
   },
   rules: [
+    ['content-fill', { content: '"_"' }],
     [/^((min|max)-)?size-(\d+)(.+)?$/, ([matcher]) => {
       const [type, sizePart] = matcher.split('size-');
       const sizeNum = Number(sizePart);
@@ -29,7 +30,7 @@ const config = defineConfig({
       if (sizeNum > 0) size = `${sizeNum / 4}rem`;
       else if (sizePart.includes('/')) {
         const [prev, suf] = sizePart.split('/');
-        const percent = 100 * Number(prev) / Number(suf);
+        const percent = (100 * Number(prev)) / Number(suf);
         size = `${percent}%`;
       }
 
@@ -70,7 +71,7 @@ const config = defineConfig({
     presetWind(),
     presetWebFonts({
       fonts: {
-        sans: 'Space Grotesk:500',
+        sans: 'Roboto',
       },
     }),
     presetIcons({
