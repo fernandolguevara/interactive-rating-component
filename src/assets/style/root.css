@@ -1,0 +1,6 @@
+.default-input {
+  @apply border-(1 text-gray) rounded p-(y1 x4) text-lg;
+}
+.default-label {
+  @apply uppercase text-sm tracking-widest;
+}

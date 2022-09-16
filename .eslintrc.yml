@@ -1,0 +1,31 @@
+env:
+  browser: true
+  es2021: true
+  node: true
+extends:
+  - airbnb
+  - plugin:solid/typescript
+parser: '@typescript-eslint/parser'
+parserOptions:
+  ecmaVersion: latest
+  sourceType: module
+plugins:
+  - '@typescript-eslint'
+  - react
+  - solid
+  - only-warn
+rules:
+  react/no-unused-prop-types: 0
+  no-param-reassign: 0
+  react/react-in-jsx-scope: 0
+  jsx-a11y/label-has-associated-control: 0
+  react/jsx-filename-extension: 0
+  react/no-unknown-property: 0
+  import/extensions: 0
+  import/no-unresolved: 0
+  import/no-extraneous-dependencies: 0
+  eqeqeq: 0
+  react/jsx-no-undef: 0
+  no-undef: 0
+  react/destructuring-assignment: 0
+  react/require-default-props: 0
