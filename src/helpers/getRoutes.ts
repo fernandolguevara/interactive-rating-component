@@ -5,7 +5,7 @@ const pages = import.meta.glob('../pages/**/*') as Record<string, () => Promise<
 
 const getPath = (path: string) => (
   path
-    .replace('./pages/', '') // Remove ./pages/ from start
+    .replace('../pages/', '') // Remove ./pages/ from start
     .replaceAll('index', '') // Remove indexes from path
     .replaceAll('@', ':') // Change @param to :param
     .replace(/\.[tj]sx/, '') // Remove .tsx and .jsx
