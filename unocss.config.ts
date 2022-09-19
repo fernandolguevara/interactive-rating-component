@@ -39,6 +39,30 @@ const config = defineConfig({
   ],
   variants: [
     (matcher) => {
+      if (!matcher.startsWith('ui-')) return matcher;
+
+      const [variant, ...rest] = matcher.split(':');
+
+      const state = variant.replace('ui-', '');
+
+      return {
+        selector: (s) => `${s}[data-ui-state*="${state}"]`,
+        matcher: rest.join(':'),
+      };
+    },
+    (matcher) => {
+      if (!matcher.startsWith('noui-')) return matcher;
+
+      const [variant, ...rest] = matcher.split(':');
+
+      const state = variant.replace('noui-', '');
+
+      return {
+        selector: (s) => `${s}:not([data-ui-state*="${state}"])`,
+        matcher: rest.join(':'),
+      };
+    },
+    (matcher) => {
       if (!matcher.startsWith('max-')) return matcher;
 
       const [variant, ...rest] = matcher.split(':');
